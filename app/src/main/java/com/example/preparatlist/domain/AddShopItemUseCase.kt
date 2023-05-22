@@ -1,7 +1,7 @@
 package com.example.preparatlist.domain
 
-class AddShopItemUseCase {
-    fun  addShopItem(shopItemId: ShopItem) {
-
+class AddShopItemUseCase(private val shopListRepository: ShopListRepository) {
+    fun addShopItem(shopItemId: ShopItem) {
+        shopListRepository.addShopItem(shopItemId)
     }
 }
